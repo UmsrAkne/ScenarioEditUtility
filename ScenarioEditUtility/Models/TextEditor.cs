@@ -34,5 +34,23 @@ namespace ScenarioEditUtility.Models
             var regex = new Regex(pattern);
             return regex.Replace(target, $"{front}$0{back}", 1);
         }
+
+        /// <summary>
+        /// target 全体を elementName で作ったタグで挟み込みます。
+        /// このメソッドは、target の中に、 elementName の要素が存在する場合は処理を行いません。
+        /// その場合は、target をそのまま返します。
+        /// </summary>
+        /// <param name="target">処理を適用する文字列</param>
+        /// <param name="elementName">要素名をタグ形式に変換して、 target を挟み込みます。</param>
+        /// <returns>target 全体を elementName の要素で挟んだ文字列</returns>
+        public string SurroundElement(string target, string elementName)
+        {
+            var open = $"<{elementName}>";
+            var end = $"</{elementName}>";
+
+            return Regex.IsMatch(target, open) && Regex.IsMatch(target, end)
+                ? target
+                : SurroundOnce(target, target, open, end);
+        }
     }
 }
