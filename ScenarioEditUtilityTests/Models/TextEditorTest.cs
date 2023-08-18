@@ -26,5 +26,18 @@ namespace ScenarioEditUtilityTests.Models
                 new TextEditor().ReplaceOnce(input, "ab", "zz"),
                 Is.EqualTo(result));
         }
+
+        [Test]
+        [TestCase("abc","b", "<", ">", "a<b>c")] 
+        [TestCase("abc,abc","b", "<", ">", "a<b>c,abc")] 
+        [TestCase("b","b", "<", ">", "<b>")] 
+        [TestCase("a0c",@"\d", "<", ">", "a<0>c")] 
+        [TestCase("a0c,a0c",@"\d", "<", ">", "a<0>c,a0c")] 
+        public void SurroundOnceTest(string input, string pattern, string front, string back, string result)
+        {
+            Assert.That(
+                new TextEditor().SurroundOnce(input, pattern, front, back),
+                Is.EqualTo(result));
+        }
     }
 }

@@ -18,5 +18,21 @@ namespace ScenarioEditUtility.Models
             var regex = new Regex(pattern);
             return regex.Replace(target, replaced, 1);
         }
+
+        /// <summary>
+        /// 正規表現を利用して文字列を検索し、マッチした文字列を引数の front, back で挟んだ文字列を取得します。
+        /// このメソッドによる処理は、target の中で最初にマッチした一回のみ行われます。
+        /// target の中に pattern が複数含まれる場合は、２つ目以降は処理されません。
+        /// </summary>
+        /// <param name="target">処理を適用する文字列</param>
+        /// <param name="pattern">挟み込む文字列</param>
+        /// <param name="front">pattern の前に付加する文字列</param>
+        /// <param name="back">pattern の後ろに付加する文字列</param>
+        /// <returns>このメソッドの処理を施した文字列</returns>
+        public string SurroundOnce(string target, string pattern, string front, string back)
+        {
+            var regex = new Regex(pattern);
+            return regex.Replace(target, $"{front}$0{back}", 1);
+        }
     }
 }
