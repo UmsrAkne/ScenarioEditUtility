@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6d1f5fde_002Dc846_002D4b23_002Da247_002D5296ee3ddc3e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ReplaceOnceTest_空白入力" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::106A5558-B8FA-4C9D-8F3F-63F6E471196F::net6.0-windows::ScenarioEditUtilityTests.Models.TextEditorTest.ReplaceOnceTest_空白入力&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::106A5558-B8FA-4C9D-8F3F-63F6E471196F::net6.0-windows::ScenarioEditUtilityTests.Models.TextEditorTest.ReplaceOnceTest_通常入力&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::106A5558-B8FA-4C9D-8F3F-63F6E471196F::net6.0-windows::ScenarioEditUtilityTests.Models.TextEditorTest.SurroundOnceTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::106A5558-B8FA-4C9D-8F3F-63F6E471196F::net6.0-windows::ScenarioEditUtilityTests.Models.TextEditorTest.SurroundElementTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
