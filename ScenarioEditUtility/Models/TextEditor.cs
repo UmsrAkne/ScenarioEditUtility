@@ -16,7 +16,7 @@ namespace ScenarioEditUtility.Models
         public string ReplaceOnce(string target, string pattern, string replaced)
         {
             var regex = new Regex(pattern);
-            return regex.Replace(target, replaced);
+            return regex.Replace(target, replaced, 1);
         }
     }
 }
