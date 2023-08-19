@@ -6,5 +6,6 @@
     &lt;TestId&gt;NUnit3x::106A5558-B8FA-4C9D-8F3F-63F6E471196F::net6.0-windows::ScenarioEditUtilityTests.Models.TextEditorTest.SurroundOnceTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::106A5558-B8FA-4C9D-8F3F-63F6E471196F::net6.0-windows::ScenarioEditUtilityTests.Models.TextEditorTest.SurroundElementTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::106A5558-B8FA-4C9D-8F3F-63F6E471196F::net6.0-windows::ScenarioEditUtilityTests.Models.TextEditorTest.SurroundAttributeTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::106A5558-B8FA-4C9D-8F3F-63F6E471196F::net6.0-windows::ScenarioEditUtilityTests.Models.TextEditorTest.ReplaceToNumberTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

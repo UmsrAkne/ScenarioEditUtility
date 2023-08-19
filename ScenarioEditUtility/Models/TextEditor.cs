@@ -1,4 +1,7 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace ScenarioEditUtility.Models
 {
@@ -68,6 +71,19 @@ namespace ScenarioEditUtility.Models
             return Regex.IsMatch(target, "[<>\"/]")
                 ? target
                 : SurroundOnce(target, target, open, end);
+        }
+
+        /// <summary>
+        /// 指定したリスト内の文字列から pattern にマッチした文字列を連番に置き換えます。
+        /// 置き換える連番は 1 番から開始します。
+        /// </summary>
+        /// <param name="targets">置き換え対象を含む文字列を詰めたリスト</param>
+        /// <param name="pattern">連番に置き換える文字列</param>
+        /// <returns>pattern を連番に置き換えた文字列のリスト</returns>
+        public IEnumerable<string> ReplaceToNumber(IEnumerable<string> targets, string pattern)
+        {
+            return targets.Select(
+                (str, index) => ReplaceOnce(str, pattern, (index + 1).ToString("D3")));
         }
     }
 }

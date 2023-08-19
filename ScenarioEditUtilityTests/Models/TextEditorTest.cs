@@ -61,5 +61,17 @@ namespace ScenarioEditUtilityTests.Models
                 new TextEditor().SurroundAttribute(input, elementName, attributeName),
                 Is.EqualTo(result));
         }
+        
+        [Test]
+        public void ReplaceToNumberTest()
+        {
+            var targets = new List<string> { "abc", "abc", "abc", };
+            var results = new TextEditor().ReplaceToNumber(targets, "c");
+            
+            CollectionAssert.AreEqual(
+                results,
+                new List<string> { "ab001", "ab002", "ab003" }
+            );
+        }
     }
 }
