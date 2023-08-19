@@ -50,5 +50,16 @@ namespace ScenarioEditUtilityTests.Models
                 new TextEditor().SurroundElement(input, elementName),
                 Is.EqualTo(result));
         }
+        
+        [TestCase("abc","d","e","<d e=\"abc\" />")] // 正常系
+        [TestCase("a<bc","d","e","a<bc")]           // 不正な文字を含むテスト
+        [TestCase("a>bc","d","e","a>bc")]           // 不正な文字を含むテスト
+        [TestCase("\"abc\"","d","e","\"abc\"")]     // 不正な文字を含むテスト
+        public void SurroundAttributeTest(string input, string elementName, string attributeName, string result)
+        {
+            Assert.That(
+                new TextEditor().SurroundAttribute(input, elementName, attributeName),
+                Is.EqualTo(result));
+        }
     }
 }
