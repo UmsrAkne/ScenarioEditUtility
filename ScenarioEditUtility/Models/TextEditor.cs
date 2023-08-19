@@ -52,5 +52,22 @@ namespace ScenarioEditUtility.Models
                 ? target
                 : SurroundOnce(target, target, open, end);
         }
+
+        /// <summary>
+        /// target 全体を elementName で作ったタグ内の attributeName の値として挟み込みます。
+        /// </summary>
+        /// <param name="target">処理を適用する文字列</param>
+        /// <param name="elementName">要素名をタグ形式に変換します。</param>
+        /// <param name="attributeName">elementName の中の属性として挿入されます。</param>
+        /// <returns>target 全体を、 elementName の中の attributeName の値として囲い込んだ文字列</returns>
+        public string SurroundAttribute(string target, string elementName, string attributeName)
+        {
+            var open = $"<{elementName} {attributeName}=\"";
+            var end = $"\" />";
+            
+            return Regex.IsMatch(target, "[<>\"/]")
+                ? target
+                : SurroundOnce(target, target, open, end);
+        }
     }
 }
